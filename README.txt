@@ -27,11 +27,6 @@ Mac: python3 spider.py
 Win: del spider.sqlite
 Win: spider.py
 
-Enter web url or enter: http://www.dr-chuck.com/
-['http://www.dr-chuck.com']
-How many pages:2
-1 http://www.dr-chuck.com/ 12
-2 http://www.dr-chuck.com/csev-blog/ 57
 How many pages:
 
 In this sample run, we told it to crawl a website and retrieve two 
@@ -43,12 +38,7 @@ each successive run of spider.py is additive.
 Mac: python3 spider.py 
 Win: spider.py
 
-Enter web url or enter: http://www.dr-chuck.com/
-['http://www.dr-chuck.com']
-How many pages:3
-3 http://www.dr-chuck.com/csev-blog 57
-4 http://www.dr-chuck.com/dr-chuck/resume/speaking.htm 1
-5 http://www.dr-chuck.com/dr-chuck/resume/index.htm 13
+Enter web url or enter: 
 How many pages:
 
 You can have multiple starting points in the same database - 
@@ -62,10 +52,6 @@ run spdump.py as follows:
 Mac: python3 spdump.py 
 Win: spdump.py
 
-(5, None, 1.0, 3, u'http://www.dr-chuck.com/csev-blog')
-(3, None, 1.0, 4, u'http://www.dr-chuck.com/dr-chuck/resume/speaking.htm')
-(1, None, 1.0, 2, u'http://www.dr-chuck.com/csev-blog/')
-(1, None, 1.0, 5, u'http://www.dr-chuck.com/dr-chuck/resume/index.htm')
 4 rows.
 
 This shows the number of incoming links, the old page rank, the new page
@@ -89,10 +75,6 @@ You can dump the database again to see that page rank has been updated:
 Mac: python3 spdump.py 
 Win: spdump.py 
 
-(5, 1.0, 0.985, 3, u'http://www.dr-chuck.com/csev-blog')
-(3, 1.0, 2.135, 4, u'http://www.dr-chuck.com/dr-chuck/resume/speaking.htm')
-(1, 1.0, 0.659, 2, u'http://www.dr-chuck.com/csev-blog/')
-(1, 1.0, 0.659, 5, u'http://www.dr-chuck.com/dr-chuck/resume/index.htm')
 4 rows.
 
 You can run sprank.py as many times as you like and it will simply refine
